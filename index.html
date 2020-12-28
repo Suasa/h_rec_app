@@ -1,0 +1,872 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
+    <script
+        src="https://code.jquery.com/jquery-3.5.1.js"
+        integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
+        crossorigin="anonymous">
+    </script>
+
+    <script src="index.js"></script>
+    <title>趣味推薦アプリ</title>
+</head>
+<body>
+    <div class="choose_box">
+        <!-- 質問一覧 -->
+        <div class="app-theme">
+          <p>趣味レコメンデーションアプリ(全60問)</p>
+        </div>
+        <!-- はじめに -->
+        <div id="q_00" class="fit" >
+          <p>本アプリは性格や習慣・人生観などの質問の回答から、</br>
+            自身が気付いていない新たな趣味の発見を目的としたものです。</br>
+            同様の質問と趣味趣向が対応した1000を超える実際の回答から、</br>
+            性格・考え方と趣味趣向に対する分析を行い作成しました。</p>
+          <span>
+            質問は5段階で回答して頂きます。1が「同意しない・そうは思わない」であり、</br>
+            数字が上がり5に近づくごとに「同意する・そう思う」といった回答方法になってます。</br>
+            また、作成元のデータが英語であるため、意訳と同時に原文を載せてあります。</br>
+            本アプリにはデータベース等は搭載しておらず、お使いの端末のみで動いております。</br>
+            したがって回答が作成者に行くことはないので、お気軽にお試しください。</br>
+              <a href="https://www.kaggle.com/miroslavsabo/young-people-survey" target="_blank">分析したデータを詳しく知りたい方はこちらをクリック</a>
+          </span>
+          <ul>
+            <li><a class="btn" href="#q_01" data-value="">診断する</a></li>
+          </ul>
+        </div>
+
+        <!-- 質問1 -->
+        <div id="q_01" style="display: none;">
+          <p>質問1: 日常の変化に気を払う方だ</p>
+          <span>原文: I take notice of what goes on around me.</span>
+          <ul>
+            <li><a class="btn" href="#q_02" data-value="1">1</a></li>
+            <li><a class="btn" href="#q_02" data-value="2">2</a></li>
+            <li><a class="btn" href="#q_02" data-value="3">3</a></li>
+            <li><a class="btn" href="#q_02" data-value="4">4</a></li>
+            <li><a class="btn" href="#q_02" data-value="5">5</a></li>
+          </ul>
+        </div>
+
+        <!-- 質問2 -->
+        <div id="q_02" style="display: none;">
+          <p>質問2:　やるべきことは出来る限り早く終わらせる</p>
+          <span>原文: I try to do tasks as soon as possible and not leave them until last minute.</span>
+          <ul>
+            <li><a class="btn" href="#q_03" data-value="1">1</a></li>
+            <li><a class="btn" href="#q_03" data-value="2">2</a></li>
+            <li><a class="btn" href="#q_03" data-value="3">3</a></li>
+            <li><a class="btn" href="#q_03" data-value="4">4</a></li>
+            <li><a class="btn" href="#q_03" data-value="5">5</a></li>
+          </ul>
+        </div>
+
+        <!-- 質問3 -->
+        <div id="q_03" style="display: none;">
+          <p>質問3: やるべきことは忘れないようにメモを取る</p>
+          <span>原文: I always make a list so I don't forget anything.</span>
+          <ul>
+            <li><a class="btn" href="#q_04" data-value="1">1</a></li>
+            <li><a class="btn" href="#q_04" data-value="2">2</a></li>
+            <li><a class="btn" href="#q_04" data-value="3">3</a></li>
+            <li><a class="btn" href="#q_04" data-value="4">4</a></li>
+            <li><a class="btn" href="#q_04" data-value="5">5</a></li>
+          </ul>
+        </div>
+
+        <!-- 質問4 -->
+        <div id="q_04" style="display: none;">
+          <p>質問4: 空き時間であっても勉強や仕事に当てる</p>
+          <span>原文: I often study or work even in my spare time.</span>
+          <ul>
+            <li><a class="btn" href="#q_05" data-value="1">1</a></li>
+            <li><a class="btn" href="#q_05" data-value="2">2</a></li>
+            <li><a class="btn" href="#q_05" data-value="3">3</a></li>
+            <li><a class="btn" href="#q_05" data-value="4">4</a></li>
+            <li><a class="btn" href="#q_05" data-value="5">5</a></li>
+          </ul>
+        </div>
+
+        <!-- 質問5 -->
+        <div id="q_05" style="display: none;">
+          <p>質問5:　考え得るすべての視点から考えてから行動に移す</p>
+          <span>原文: I look at things from all different angles before I go ahead.</span>
+          <ul>
+            <li><a class="btn" href="#q_06" data-value="1">1</a></li>
+            <li><a class="btn" href="#q_06" data-value="2">2</a></li>
+            <li><a class="btn" href="#q_06" data-value="3">3</a></li>
+            <li><a class="btn" href="#q_06" data-value="4">4</a></li>
+            <li><a class="btn" href="#q_06" data-value="5">5</a></li>
+          </ul>
+        </div>
+
+        <!-- 質問6 -->
+        <div id="q_06" style="display: none;">
+          <p>質問6:　悪事を働いた者にはいつか必ずそれ相応の報いが来ると信じている</p>
+          <span>原文: I believe that bad people will suffer one day and good people will be rewarded.</span>
+          <ul>
+            <li><a class="btn" href="#q_07" data-value="1">1</a></li>
+            <li><a class="btn" href="#q_07" data-value="2">2</a></li>
+            <li><a class="btn" href="#q_07" data-value="3">3</a></li>
+            <li><a class="btn" href="#q_07" data-value="4">4</a></li>
+            <li><a class="btn" href="#q_07" data-value="5">5</a></li>
+          </ul>
+        </div>
+
+        <!-- 質問7 -->
+        <div id="q_07" style="display: none;">
+          <p>質問7:　仕事では信頼を置かれていて、振られた仕事はすべて完璧にこなす</p>
+          <span>原文: I am reliable at work and always complete all tasks given to me.</span>
+          <ul>
+            <li><a class="btn" href="#q_08" data-value="1">1</a></li>
+            <li><a class="btn" href="#q_08" data-value="2">2</a></li>
+            <li><a class="btn" href="#q_08" data-value="3">3</a></li>
+            <li><a class="btn" href="#q_08" data-value="4">4</a></li>
+            <li><a class="btn" href="#q_08" data-value="5">5</a></li>
+          </ul>
+        </div>
+
+        <!-- 質問8 -->
+        <div id="q_08" style="display: none;">
+          <p>質問8:　約束は必ず守る</p>
+          <span>原文: I always keep my promises.</span>
+          <ul>
+            <li><a class="btn" href="#q_09" data-value="1">1</a></li>
+            <li><a class="btn" href="#q_09" data-value="2">2</a></li>
+            <li><a class="btn" href="#q_09" data-value="3">3</a></li>
+            <li><a class="btn" href="#q_09" data-value="4">4</a></li>
+            <li><a class="btn" href="#q_09" data-value="5">5</a></li>
+          </ul>
+        </div>
+
+        <!-- 質問9 -->
+        <div id="q_09" style="display: none;">
+          <p>質問9: 惚れっぽいが冷めやすい方だ</p>
+          <span>原文: I can fall for someone very quickly and then completely lose interest.</span>
+          <ul>
+            <li><a class="btn" href="#q_10" data-value="1">1</a></li>
+            <li><a class="btn" href="#q_10" data-value="2">2</a></li>
+            <li><a class="btn" href="#q_10" data-value="3">3</a></li>
+            <li><a class="btn" href="#q_10" data-value="4">4</a></li>
+            <li><a class="btn" href="#q_10" data-value="5">5</a></li>
+          </ul>
+        </div>
+
+        <!-- 質問10 -->
+        <div id="q_10" style="display: none;">
+          <p>質問10: 大金を得るよりもより多くの友達が欲しい</p>
+          <span>原文: I would rather have lots of friends than lots of money.</span>
+          <ul>
+            <li><a class="btn" href="#q_11" data-value="1">1</a></li>
+            <li><a class="btn" href="#q_11" data-value="2">2</a></li>
+            <li><a class="btn" href="#q_11" data-value="3">3</a></li>
+            <li><a class="btn" href="#q_11" data-value="4">4</a></li>
+            <li><a class="btn" href="#q_11" data-value="5">5</a></li>
+          </ul>
+        </div>
+
+        <div id="q_11" style="display: none;">
+          <p>質問11: どのコミュニティであれ1番面白い人であろうとする</p>
+          <span>原文: I always try to be the funniest one.</span>
+          <ul>
+            <li><a class="btn" href="#q_12" data-value="1">1</a></li>
+            <li><a class="btn" href="#q_12" data-value="2">2</a></li>
+            <li><a class="btn" href="#q_12" data-value="3">3</a></li>
+            <li><a class="btn" href="#q_12" data-value="4">4</a></li>
+            <li><a class="btn" href="#q_12" data-value="5">5</a></li>
+          </ul>
+        </div>
+
+
+        <div id="q_12" style="display: none;">
+          <p>質問12: 自分のキャラクターや態度を使い分けることがある</p>
+          <span>原文: I can be two faced sometimes.</span>
+          <ul>
+            <li><a class="btn" href="#q_13" data-value="1">1</a></li>
+            <li><a class="btn" href="#q_13" data-value="2">2</a></li>
+            <li><a class="btn" href="#q_13" data-value="3">3</a></li>
+            <li><a class="btn" href="#q_13" data-value="4">4</a></li>
+            <li><a class="btn" href="#q_13" data-value="5">5</a></li>
+          </ul>
+        </div>
+
+
+        <div id="q_13" style="display: none;">
+          <p>質問13: 怒りで物に当たったことがある</p>
+          <span>原文: I damaged things in the past when angry.</span>
+          <ul>
+            <li><a class="btn" href="#q_14" data-value="1">1</a></li>
+            <li><a class="btn" href="#q_14" data-value="2">2</a></li>
+            <li><a class="btn" href="#q_14" data-value="3">3</a></li>
+            <li><a class="btn" href="#q_14" data-value="4">4</a></li>
+            <li><a class="btn" href="#q_14" data-value="5">5</a></li>
+          </ul>
+        </div>
+
+
+        <div id="q_14" style="display: none;">
+          <p>質問14: 決断を下すのに時間がかかる方だ</p>
+          <span>原文: I take my time to make decisions.</span>
+          <ul>
+            <li><a class="btn" href="#q_15" data-value="1">1</a></li>
+            <li><a class="btn" href="#q_15" data-value="2">2</a></li>
+            <li><a class="btn" href="#q_15" data-value="3">3</a></li>
+            <li><a class="btn" href="#q_15" data-value="4">4</a></li>
+            <li><a class="btn" href="#q_15" data-value="5">5</a></li>
+          </ul>
+        </div>
+
+
+        <div id="q_15" style="display: none;">
+          <p>質問15: 選挙があるときは出来る限り投票にいく</p>
+          <span>原文: I always try to vote in elections.</span>
+          <ul>
+            <li><a class="btn" href="#q_16" data-value="1">1</a></li>
+            <li><a class="btn" href="#q_16" data-value="2">2</a></li>
+            <li><a class="btn" href="#q_16" data-value="3">3</a></li>
+            <li><a class="btn" href="#q_16" data-value="4">4</a></li>
+            <li><a class="btn" href="#q_16" data-value="5">5</a></li>
+          </ul>
+        </div>
+
+
+        <div id="q_16" style="display: none;">
+          <p>質問16: 行った決断に対してしばしば後悔をする</p>
+          <span>原文: I often think about and regret the decisions I make.</span>
+          <ul>
+            <li><a class="btn" href="#q_17" data-value="1">1</a></li>
+            <li><a class="btn" href="#q_17" data-value="2">2</a></li>
+            <li><a class="btn" href="#q_17" data-value="3">3</a></li>
+            <li><a class="btn" href="#q_17" data-value="4">4</a></li>
+            <li><a class="btn" href="#q_17" data-value="5">5</a></li>
+          </ul>
+        </div>
+
+
+        <div id="q_17" style="display: none;">
+          <p>質問17: 自分の話を相手が聞いているかどうかがわかる</p>
+          <span>原文: I can tell if people listen to me or not when I talk to them</span>
+          <ul>
+            <li><a class="btn" href="#q_18" data-value="1">1</a></li>
+            <li><a class="btn" href="#q_18" data-value="2">2</a></li>
+            <li><a class="btn" href="#q_18" data-value="3">3</a></li>
+            <li><a class="btn" href="#q_18" data-value="4">4</a></li>
+            <li><a class="btn" href="#q_18" data-value="5">5</a></li>
+          </ul>
+        </div>
+
+
+        <div id="q_18" style="display: none;">
+          <p>質問18: 心配性である</p>
+          <span>原文: I am a hypochondriac.</span>
+          <ul>
+            <li><a class="btn" href="#q_19" data-value="1">1</a></li>
+            <li><a class="btn" href="#q_19" data-value="2">2</a></li>
+            <li><a class="btn" href="#q_19" data-value="3">3</a></li>
+            <li><a class="btn" href="#q_19" data-value="4">4</a></li>
+            <li><a class="btn" href="#q_19" data-value="5">5</a></li>
+          </ul>
+        </div>
+
+
+        <div id="q_19" style="display: none;">
+          <p>質問19: 共感性が高い方だ</p>
+          <span>原文: I am emphatetic person.</span>
+          <ul>
+            <li><a class="btn" href="#q_20" data-value="1">1</a></li>
+            <li><a class="btn" href="#q_20" data-value="2">2</a></li>
+            <li><a class="btn" href="#q_20" data-value="3">3</a></li>
+            <li><a class="btn" href="#q_20" data-value="4">4</a></li>
+            <li><a class="btn" href="#q_20" data-value="5">5</a></li>
+          </ul>
+        </div>
+
+        <!-- 質問20 -->
+        <div id="q_20" style="display: none;">
+          <p>質問20: 食に関して興味がない。生きるために必要だから食事をする。</p>
+          <span>原文: I eat because I have to. I don't enjoy food and eat as fast as I can.</span>
+          <ul>
+            <li><a class="btn" href="#q_21" data-value="1">1</a></li>
+            <li><a class="btn" href="#q_21" data-value="2">2</a></li>
+            <li><a class="btn" href="#q_21" data-value="3">3</a></li>
+            <li><a class="btn" href="#q_21" data-value="4">4</a></li>
+            <li><a class="btn" href="#q_21" data-value="5">5</a></li>
+          </ul>
+        </div>
+
+
+        <div id="q_21" style="display: none;">
+          <p>質問21: 動物が苦しんでいる姿を見るのは苦手だ</p>
+          <span>原文: I don't like seeing animals suffering.</span>
+          <ul>
+            <li><a class="btn" href="#q_22" data-value="1">1</a></li>
+            <li><a class="btn" href="#q_22" data-value="2">2</a></li>
+            <li><a class="btn" href="#q_22" data-value="3">3</a></li>
+            <li><a class="btn" href="#q_22" data-value="4">4</a></li>
+            <li><a class="btn" href="#q_22" data-value="5">5</a></li>
+          </ul>
+        </div>
+
+
+        <div id="q_22" style="display: none;">
+          <p>質問22: 借りた物はしっかり管理をする</p>
+          <span>原文: I look after things I have borrowed from others.</span>
+          <ul>
+            <li><a class="btn" href="#q_23" data-value="1">1</a></li>
+            <li><a class="btn" href="#q_23" data-value="2">2</a></li>
+            <li><a class="btn" href="#q_23" data-value="3">3</a></li>
+            <li><a class="btn" href="#q_23" data-value="4">4</a></li>
+            <li><a class="btn" href="#q_23" data-value="5">5</a></li>
+          </ul>
+        </div>
+
+
+        <div id="q_23" style="display: none;">
+          <p>質問23: 寂しがり屋である</p>
+          <span>原文: I feel lonely in life.</span>
+          <ul>
+            <li><a class="btn" href="#q_24" data-value="1">1</a></li>
+            <li><a class="btn" href="#q_24" data-value="2">2</a></li>
+            <li><a class="btn" href="#q_24" data-value="3">3</a></li>
+            <li><a class="btn" href="#q_24" data-value="4">4</a></li>
+            <li><a class="btn" href="#q_24" data-value="5">5</a></li>
+          </ul>
+        </div>
+
+
+        <div id="q_24" style="display: none;">
+          <p>質問24: カンニングをしたことがある</p>
+          <span>原文: I used to cheat at school.</span>
+          <ul>
+            <li><a class="btn" href="#q_25" data-value="1">1</a></li>
+            <li><a class="btn" href="#q_25" data-value="2">2</a></li>
+            <li><a class="btn" href="#q_25" data-value="3">3</a></li>
+            <li><a class="btn" href="#q_25" data-value="4">4</a></li>
+            <li><a class="btn" href="#q_25" data-value="5">5</a></li>
+          </ul>
+        </div>
+
+
+        <div id="q_25" style="display: none;">
+          <p>質問25: 自分の健康に対して不安がある。</p>
+          <span>原文: I worry about my health.</span>
+          <ul>
+            <li><a class="btn" href="#q_26" data-value="1">1</a></li>
+            <li><a class="btn" href="#q_26" data-value="2">2</a></li>
+            <li><a class="btn" href="#q_26" data-value="3">3</a></li>
+            <li><a class="btn" href="#q_26" data-value="4">4</a></li>
+            <li><a class="btn" href="#q_26" data-value="5">5</a></li>
+          </ul>
+        </div>
+
+
+        <div id="q_26" style="display: none;">
+          <p>質問26: 過去を変えたいと思う</p>
+          <span>原文: I wish I could change the past because of the things I have done.</span>
+          <ul>
+            <li><a class="btn" href="#q_27" data-value="1">1</a></li>
+            <li><a class="btn" href="#q_27" data-value="2">2</a></li>
+            <li><a class="btn" href="#q_27" data-value="3">3</a></li>
+            <li><a class="btn" href="#q_27" data-value="4">4</a></li>
+            <li><a class="btn" href="#q_27" data-value="5">5</a></li>
+          </ul>
+        </div>
+
+
+        <div id="q_27" style="display: none;">
+          <p>質問27: 神を信じている</p>
+          <span>原文: I believe in God.</span>
+          <ul>
+            <li><a class="btn" href="#q_28" data-value="1">1</a></li>
+            <li><a class="btn" href="#q_28" data-value="2">2</a></li>
+            <li><a class="btn" href="#q_28" data-value="3">3</a></li>
+            <li><a class="btn" href="#q_28" data-value="4">4</a></li>
+            <li><a class="btn" href="#q_28" data-value="5">5</a></li>
+          </ul>
+        </div>
+
+
+        <div id="q_28" style="display: none;">
+          <p>質問28: 見る夢は良いものばかりだ</p>
+          <span>原文: I always have good dreams.</span>
+          <ul>
+            <li><a class="btn" href="#q_29" data-value="1">1</a></li>
+            <li><a class="btn" href="#q_29" data-value="2">2</a></li>
+            <li><a class="btn" href="#q_29" data-value="3">3</a></li>
+            <li><a class="btn" href="#q_29" data-value="4">4</a></li>
+            <li><a class="btn" href="#q_29" data-value="5">5</a></li>
+          </ul>
+        </div>
+
+
+        <div id="q_29" style="display: none;">
+          <p>質問29: 募金に協力的だ</p>
+          <span>原文: I always give to charity.</span>
+          <ul>
+            <li><a class="btn" href="#q_30" data-value="1">1</a></li>
+            <li><a class="btn" href="#q_30" data-value="2">2</a></li>
+            <li><a class="btn" href="#q_30" data-value="3">3</a></li>
+            <li><a class="btn" href="#q_30" data-value="4">4</a></li>
+            <li><a class="btn" href="#q_30" data-value="5">5</a></li>
+          </ul>
+        </div>
+
+        <!-- 質問30 -->
+        <div id="q_30" style="display: none;">
+          <p>質問30: 友達は多い方だ</p>
+          <span>原文: I have lots of friends.</span>
+          <ul>
+            <li><a class="btn" href="#q_31" data-value="1">1</a></li>
+            <li><a class="btn" href="#q_31" data-value="2">2</a></li>
+            <li><a class="btn" href="#q_31" data-value="3">3</a></li>
+            <li><a class="btn" href="#q_31" data-value="4">4</a></li>
+            <li><a class="btn" href="#q_31" data-value="5">5</a></li>
+          </ul>
+        </div>
+
+
+        <div id="q_31" style="display: none;">
+          <p>質問31: 我慢強い方である</p>
+          <span>原文: I am very patient.</span>
+          <ul>
+            <li><a class="btn" href="#q_32" data-value="1">1</a></li>
+            <li><a class="btn" href="#q_32" data-value="2">2</a></li>
+            <li><a class="btn" href="#q_32" data-value="3">3</a></li>
+            <li><a class="btn" href="#q_32" data-value="4">4</a></li>
+            <li><a class="btn" href="#q_32" data-value="5">5</a></li>
+          </ul>
+        </div>
+
+
+        <div id="q_32" style="display: none;">
+          <p>質問32: 新しい環境にはすぐ慣れる方だ</p>
+          <span>原文: I can quickly adapt to a new environment.</span>
+          <ul>
+            <li><a class="btn" href="#q_33" data-value="1">1</a></li>
+            <li><a class="btn" href="#q_33" data-value="2">2</a></li>
+            <li><a class="btn" href="#q_33" data-value="3">3</a></li>
+            <li><a class="btn" href="#q_33" data-value="4">4</a></li>
+            <li><a class="btn" href="#q_33" data-value="5">5</a></li>
+          </ul>
+        </div>
+
+
+        <div id="q_33" style="display: none;">
+          <p>質問33: 感情の起伏が激しい方だ</p>
+          <span>原文: My moods change quickly.</span>
+          <ul>
+            <li><a class="btn" href="#q_34" data-value="1">1</a></li>
+            <li><a class="btn" href="#q_34" data-value="2">2</a></li>
+            <li><a class="btn" href="#q_34" data-value="3">3</a></li>
+            <li><a class="btn" href="#q_34" data-value="4">4</a></li>
+            <li><a class="btn" href="#q_34" data-value="5">5</a></li>
+          </ul>
+        </div>
+
+
+        <div id="q_34" style="display: none;">
+          <p>質問34: 行儀がよく、外見にも気を払う</p>
+          <span>原文: I am well mannered and I look after my appearance.</span>
+          <ul>
+            <li><a class="btn" href="#q_35" data-value="1">1</a></li>
+            <li><a class="btn" href="#q_35" data-value="2">2</a></li>
+            <li><a class="btn" href="#q_35" data-value="3">3</a></li>
+            <li><a class="btn" href="#q_35" data-value="4">4</a></li>
+            <li><a class="btn" href="#q_35" data-value="5">5</a></li>
+          </ul>
+        </div>
+
+
+        <div id="q_35" style="display: none;">
+          <p>質問35: 新しい出会いが楽しみである</p>
+          <span>原文: I enjoy meeting new people.</span>
+          <ul>
+            <li><a class="btn" href="#q_36" data-value="1">1</a></li>
+            <li><a class="btn" href="#q_36" data-value="2">2</a></li>
+            <li><a class="btn" href="#q_36" data-value="3">3</a></li>
+            <li><a class="btn" href="#q_36" data-value="4">4</a></li>
+            <li><a class="btn" href="#q_36" data-value="5">5</a></li>
+          </ul>
+        </div>
+
+
+        <div id="q_36" style="display: none;">
+          <p>質問36: 自分の功績を他人に話す方だ</p>
+          <span>原文: I always let other people know about my achievements.</span>
+          <ul>
+            <li><a class="btn" href="#q_37" data-value="1">1</a></li>
+            <li><a class="btn" href="#q_37" data-value="2">2</a></li>
+            <li><a class="btn" href="#q_37" data-value="3">3</a></li>
+            <li><a class="btn" href="#q_37" data-value="4">4</a></li>
+            <li><a class="btn" href="#q_37" data-value="5">5</a></li>
+          </ul>
+        </div>
+
+
+        <div id="q_37" style="display: none;">
+          <p>質問37: 重要なメールには注意深く考えてから返信をする</p>
+          <span>原文: I think carefully before answering any important letters.</span>
+          <ul>
+            <li><a class="btn" href="#q_38" data-value="1">1</a></li>
+            <li><a class="btn" href="#q_38" data-value="2">2</a></li>
+            <li><a class="btn" href="#q_38" data-value="3">3</a></li>
+            <li><a class="btn" href="#q_38" data-value="4">4</a></li>
+            <li><a class="btn" href="#q_38" data-value="5">5</a></li>
+          </ul>
+        </div>
+
+
+        <div id="q_38" style="display: none;">
+          <p>質問38: 子どもと過ごすのが好きである</p>
+          <span>原文: I enjoy childrens' company.</span>
+          <ul>
+            <li><a class="btn" href="#q_39" data-value="1">1</a></li>
+            <li><a class="btn" href="#q_39" data-value="2">2</a></li>
+            <li><a class="btn" href="#q_39" data-value="3">3</a></li>
+            <li><a class="btn" href="#q_39" data-value="4">4</a></li>
+            <li><a class="btn" href="#q_39" data-value="5">5</a></li>
+          </ul>
+        </div>
+
+
+        <div id="q_39" style="display: none;">
+          <p>質問39: 強い思いがあれば自分の意見を言うのは怖くない</p>
+          <span>原文: I am not afraid to give my opinion if I feel strongly about something.</span>
+          <ul>
+            <li><a class="btn" href="#q_40" data-value="1">1</a></li>
+            <li><a class="btn" href="#q_40" data-value="2">2</a></li>
+            <li><a class="btn" href="#q_40" data-value="3">3</a></li>
+            <li><a class="btn" href="#q_40" data-value="4">4</a></li>
+            <li><a class="btn" href="#q_40" data-value="5">5</a></li>
+          </ul>
+        </div>
+
+        <!-- 質問40 -->
+        <div id="q_40" style="display: none;">
+          <p>質問40: 怒りっぽい方だ</p>
+          <span>原文: I can get angry very easily.</span>
+          <ul>
+            <li><a class="btn" href="#q_41" data-value="1">1</a></li>
+            <li><a class="btn" href="#q_41" data-value="2">2</a></li>
+            <li><a class="btn" href="#q_41" data-value="3">3</a></li>
+            <li><a class="btn" href="#q_41" data-value="4">4</a></li>
+            <li><a class="btn" href="#q_41" data-value="5">5</a></li>
+          </ul>
+        </div>
+
+
+        <div id="q_41" style="display: none;">
+          <p>質問41: 正しい相手かを見極めて人付き合いをする</p>
+          <span>原文: I always make sure I connect with the right people.</span>
+          <ul>
+            <li><a class="btn" href="#q_42" data-value="1">1</a></li>
+            <li><a class="btn" href="#q_42" data-value="2">2</a></li>
+            <li><a class="btn" href="#q_42" data-value="3">3</a></li>
+            <li><a class="btn" href="#q_42" data-value="4">4</a></li>
+            <li><a class="btn" href="#q_42" data-value="5">5</a></li>
+          </ul>
+        </div>
+
+
+        <div id="q_42" style="display: none;">
+          <p>質問42: 人前で話すときは、しっかりとした準備を事前に行う</p>
+          <span>原文: I have to be well prepared before public speaking.</span>
+          <ul>
+            <li><a class="btn" href="#q_43" data-value="1">1</a></li>
+            <li><a class="btn" href="#q_43" data-value="2">2</a></li>
+            <li><a class="btn" href="#q_43" data-value="3">3</a></li>
+            <li><a class="btn" href="#q_43" data-value="4">4</a></li>
+            <li><a class="btn" href="#q_43" data-value="5">5</a></li>
+          </ul>
+        </div>
+
+
+        <div id="q_43" style="display: none;">
+          <p>質問43: 人に嫌われたときは自分に落ち度がないか考えてしまう</p>
+          <span>原文: I will find a fault in myself if people don't like me.</span>
+          <ul>
+            <li><a class="btn" href="#q_44" data-value="1">1</a></li>
+            <li><a class="btn" href="#q_44" data-value="2">2</a></li>
+            <li><a class="btn" href="#q_44" data-value="3">3</a></li>
+            <li><a class="btn" href="#q_44" data-value="4">4</a></li>
+            <li><a class="btn" href="#q_44" data-value="5">5</a></li>
+          </ul>
+        </div>
+
+
+        <div id="q_44" style="display: none;">
+          <p>質問44: 気持ちが落ち込むと泣いてしまう</p>
+          <span>原文: I cry when I feel down or things don't go the right way.</span>
+          <ul>
+            <li><a class="btn" href="#q_45" data-value="1">1</a></li>
+            <li><a class="btn" href="#q_45" data-value="2">2</a></li>
+            <li><a class="btn" href="#q_45" data-value="3">3</a></li>
+            <li><a class="btn" href="#q_45" data-value="4">4</a></li>
+            <li><a class="btn" href="#q_45" data-value="5">5</a></li>
+          </ul>
+        </div>
+
+
+        <div id="q_45" style="display: none;">
+          <p>質問45: 自分の人生がこの上なく幸せなものに思える</p>
+          <span>原文: I am 100% happy with my life.</span>
+          <ul>
+            <li><a class="btn" href="#q_46" data-value="1">1</a></li>
+            <li><a class="btn" href="#q_46" data-value="2">2</a></li>
+            <li><a class="btn" href="#q_46" data-value="3">3</a></li>
+            <li><a class="btn" href="#q_46" data-value="4">4</a></li>
+            <li><a class="btn" href="#q_46" data-value="5">5</a></li>
+          </ul>
+        </div>
+
+
+        <div id="q_46" style="display: none;">
+          <p>質問46: 常に活力に満ちている</p>
+          <span>原文: I am always full of life and energy.</span>
+          <ul>
+            <li><a class="btn" href="#q_47" data-value="1">1</a></li>
+            <li><a class="btn" href="#q_47" data-value="2">2</a></li>
+            <li><a class="btn" href="#q_47" data-value="3">3</a></li>
+            <li><a class="btn" href="#q_47" data-value="4">4</a></li>
+            <li><a class="btn" href="#q_47" data-value="5">5</a></li>
+          </ul>
+        </div>
+
+
+        <div id="q_47" style="display: none;">
+          <p>質問47: 大人しく小さな犬よりも大きく危なそうな犬の方が好きだ</p>
+          <span>原文: I prefer big dangerous dogs to smaller, calmer dogs.</span>
+          <ul>
+            <li><a class="btn" href="#q_48" data-value="1">1</a></li>
+            <li><a class="btn" href="#q_48" data-value="2">2</a></li>
+            <li><a class="btn" href="#q_48" data-value="3">3</a></li>
+            <li><a class="btn" href="#q_48" data-value="4">4</a></li>
+            <li><a class="btn" href="#q_48" data-value="5">5</a></li>
+          </ul>
+        </div>
+
+
+        <div id="q_48" style="display: none;">
+          <p>質問48: ポジティブな性格である</p>
+          <span>原文: I believe all my personality traits are positive.</span>
+          <ul>
+            <li><a class="btn" href="#q_49" data-value="1">1</a></li>
+            <li><a class="btn" href="#q_49" data-value="2">2</a></li>
+            <li><a class="btn" href="#q_49" data-value="3">3</a></li>
+            <li><a class="btn" href="#q_49" data-value="4">4</a></li>
+            <li><a class="btn" href="#q_49" data-value="5">5</a></li>
+          </ul>
+        </div>
+
+
+        <div id="q_49" style="display: none;">
+          <p>質問49: 落とし物は届出す</p>
+          <span>原文: If I find something the doesn't belong to me I will hand it in.</span>
+          <ul>
+            <li><a class="btn" href="#q_50" data-value="1">1</a></li>
+            <li><a class="btn" href="#q_50" data-value="2">2</a></li>
+            <li><a class="btn" href="#q_50" data-value="3">3</a></li>
+            <li><a class="btn" href="#q_50" data-value="4">4</a></li>
+            <li><a class="btn" href="#q_50" data-value="5">5</a></li>
+          </ul>
+        </div>
+
+        <!-- 質問50 -->
+        <div id="q_50" style="display: none;">
+          <p>質問50: 早起きが苦手だ</p>
+          <span>原文: I find it very difficult to get up in the morning.</span>
+          <ul>
+            <li><a class="btn" href="#q_51" data-value="1">1</a></li>
+            <li><a class="btn" href="#q_51" data-value="2">2</a></li>
+            <li><a class="btn" href="#q_51" data-value="3">3</a></li>
+            <li><a class="btn" href="#q_51" data-value="4">4</a></li>
+            <li><a class="btn" href="#q_51" data-value="5">5</a></li>
+          </ul>
+        </div>
+
+
+        <div id="q_51" style="display: none;">
+          <p>質問51: 多趣味である</p>
+          <span>原文: I have many different hobbies and interests.</span>
+          <ul>
+            <li><a class="btn" href="#q_52" data-value="1">1</a></li>
+            <li><a class="btn" href="#q_52" data-value="2">2</a></li>
+            <li><a class="btn" href="#q_52" data-value="3">3</a></li>
+            <li><a class="btn" href="#q_52" data-value="4">4</a></li>
+            <li><a class="btn" href="#q_52" data-value="5">5</a></li>
+          </ul>
+        </div>
+
+
+        <div id="q_52" style="display: none;">
+          <p>質問52: 親の言うことは必ず聞く</p>
+          <span>原文: I always listen to my parents' advice.</span>
+          <ul>
+            <li><a class="btn" href="#q_53" data-value="1">1</a></li>
+            <li><a class="btn" href="#q_53" data-value="2">2</a></li>
+            <li><a class="btn" href="#q_53" data-value="3">3</a></li>
+            <li><a class="btn" href="#q_53" data-value="4">4</a></li>
+            <li><a class="btn" href="#q_53" data-value="5">5</a></li>
+          </ul>
+        </div>
+
+
+        <div id="q_53" style="display: none;">
+          <p>質問53: アンケート調査には協力的だ</p>
+          <span>原文: I enjoy taking part in surveys.</span>
+          <ul>
+            <li><a class="btn" href="#q_54" data-value="1">1</a></li>
+            <li><a class="btn" href="#q_54" data-value="2">2</a></li>
+            <li><a class="btn" href="#q_54" data-value="3">3</a></li>
+            <li><a class="btn" href="#q_54" data-value="4">4</a></li>
+            <li><a class="btn" href="#q_54" data-value="5">5</a></li>
+          </ul>
+        </div>
+
+
+        <div id="q_54" style="display: none;">
+          <p>質問54: 節約家である</p>
+          <span>原文: I save all the money I can.</span>
+          <ul>
+            <li><a class="btn" href="#q_55" data-value="1">1</a></li>
+            <li><a class="btn" href="#q_55" data-value="2">2</a></li>
+            <li><a class="btn" href="#q_55" data-value="3">3</a></li>
+            <li><a class="btn" href="#q_55" data-value="4">4</a></li>
+            <li><a class="btn" href="#q_55" data-value="5">5</a></li>
+          </ul>
+        </div>
+
+
+        <div id="q_55" style="display: none;">
+          <p>質問55: ショッピングモールに行くことが好きだ</p>
+          <span>原文: I enjoy going to large shopping centres.</span>
+          <ul>
+            <li><a class="btn" href="#q_56" data-value="1">1</a></li>
+            <li><a class="btn" href="#q_56" data-value="2">2</a></li>
+            <li><a class="btn" href="#q_56" data-value="3">3</a></li>
+            <li><a class="btn" href="#q_56" data-value="4">4</a></li>
+            <li><a class="btn" href="#q_56" data-value="5">5</a></li>
+          </ul>
+        </div>
+
+
+        <div id="q_56" style="display: none;">
+          <p>質問56: ブランド物の衣服が好きである</p>
+          <span>原文: I prefer branded clothing to non branded.</span>
+          <ul>
+            <li><a class="btn" href="#q_57" data-value="1">1</a></li>
+            <li><a class="btn" href="#q_57" data-value="2">2</a></li>
+            <li><a class="btn" href="#q_57" data-value="3">3</a></li>
+            <li><a class="btn" href="#q_57" data-value="4">4</a></li>
+            <li><a class="btn" href="#q_57" data-value="5">5</a></li>
+          </ul>
+        </div>
+
+
+        <div id="q_57" style="display: none;">
+          <p>質問57: 人付き合いに対してお金をかける</p>
+          <span>原文: I spend a lot of money on partying and socializing.</span>
+          <ul>
+            <li><a class="btn" href="#q_58" data-value="1">1</a></li>
+            <li><a class="btn" href="#q_58" data-value="2">2</a></li>
+            <li><a class="btn" href="#q_58" data-value="3">3</a></li>
+            <li><a class="btn" href="#q_58" data-value="4">4</a></li>
+            <li><a class="btn" href="#q_58" data-value="5">5</a></li>
+          </ul>
+        </div>
+
+
+        <div id="q_58" style="display: none;">
+          <p>質問58: 外見にお金をかける方だ</p>
+          <span>原文: I spend a lot of money on my appearance.</span>
+          <ul>
+            <li><a class="btn" href="#q_59" data-value="1">1</a></li>
+            <li><a class="btn" href="#q_59" data-value="2">2</a></li>
+            <li><a class="btn" href="#q_59" data-value="3">3</a></li>
+            <li><a class="btn" href="#q_59" data-value="4">4</a></li>
+            <li><a class="btn" href="#q_59" data-value="5">5</a></li>
+          </ul>
+        </div>
+
+
+        <div id="q_59" style="display: none;">
+          <p>質問59: ガジェットにお金をかける方だ</p>
+          <span>原文: I spend a lot of money on gadgets.</span>
+          <ul>
+            <li><a class="btn" href="#q_60" data-value="1">1</a></li>
+            <li><a class="btn" href="#q_60" data-value="2">2</a></li>
+            <li><a class="btn" href="#q_60" data-value="3">3</a></li>
+            <li><a class="btn" href="#q_60" data-value="4">4</a></li>
+            <li><a class="btn" href="#q_60" data-value="5">5</a></li>
+          </ul>
+        </div>
+
+        <!-- 質問8 -->
+        <div id="q_60" style="display: none;">
+          <p>質問60:　質の高い健康的な食事にお金をかける方だ</p>
+          <span>原文: I will hapilly pay more money for good, quality or healthy food..</span>
+          <ul>
+            <li><a class="btn end" data-value="1">1</a></li>
+            <li><a class="btn end" data-value="2">2</a></li>
+            <li><a class="btn end" data-value="3">3</a></li>
+            <li><a class="btn end" data-value="4">4</a></li>
+            <li><a class="btn end" data-value="5">5</a></li>
+          </ul>
+        </div>
+
+     <!-- 回答の答え -->
+    <div id="results" class="result" style="display: none;">
+      <div class="result_theme ">
+          <h2>推薦結果</br>(5段階で数字が高いものが最もおすすめです)</h2>
+            <p>音楽</p>
+            <span id="Classical_music">デフォルトの文章</span>
+            <span id="Pop">デフォルトの文章</span>
+            <span id="Rock">デフォルトの文章</span>
+            <span id="Metal_or_Hardrock">デフォルトの文章</span>
+            <span id="Hiphop_Rap">デフォルトの文章</span>
+            <span id="Techno_Trance">デフォルトの文章</span>
+            <span id="Opera">デフォルトの文章</span>
+
+            <p>映画</p>
+            <span id="Horror">デフォルトの文章</span>
+            <span id="Comedy">デフォルトの文章</span>
+            <span id="Romantic">デフォルトの文章</span>
+            <span id="Sci_fi">デフォルトの文章</span>
+            <span id="Animated">デフォルトの文章</span>
+            <span id="Documentary">デフォルトの文章</span>
+            <span id="Action">デフォルトの文章</span>
+
+            <p>学問</p>
+            <span id="Mathematics">デフォルトの文章</span>
+            <span id="Physics">デフォルトの文章</span>
+            <span id="Chemistry">デフォルトの文章</span>
+            <span id="Biology">デフォルトの文章</span>
+            <span id="Geography">デフォルトの文章</span>
+            <span id="History">デフォルトの文章</span>
+            <span id="Economy_Management">デフォルトの文章</span>
+            <span id="Law">デフォルトの文章</span>
+            <span id="Politics">デフォルトの文章</span>
+            <span id="Foreign_languages">デフォルトの文章</span>
+            <span id="Psychology">デフォルトの文章</span>
+
+            <p>一般</p>
+            <span id="Dancing">デフォルトの文章</span>
+            <span id="Musical_instruments">デフォルトの文章</span>
+            <span id="Passive_sport">デフォルトの文章</span>
+            <span id="Shopping">デフォルトの文章</span>
+            <span id="Theatre">デフォルトの文章</span>
+            <span id="Internet">デフォルトの文章</span>
+            <span id="PC">デフォルトの文章</span>
+            <span id="Art_exhibitions">デフォルトの文章</span>
+            <span id="Pets">デフォルトの文章</span>
+      </div>
+       <div class="return-btn">
+        <a class="return" href="index.html">もどる</a>
+       </div>
+     </div>
+
+   </div>
+</body>
+</html>
